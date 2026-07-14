@@ -48,6 +48,7 @@ O progresso visual é ancorado no centro de cada seção editorial. `App.tsx` su
 ## Riscos e próximos passos
 
 - O bundle 3D é grande por natureza; medir cache e carregamento em hospedagem real antes de adicionar assets.
+- R3F 9.6.1 ainda instancia `THREE.Clock`, marcado como deprecated no Three r183+. Isso gera um aviso da dependência, não usa nem afeta o relógio visual próprio. Não silenciar nem patchar `node_modules`; reavaliar quando R3F migrar para `THREE.Timer`.
 - O audit headless usa SwiftShader. FPS, temperatura e consumo devem ser medidos em celulares físicos de entrada antes de produção.
 - Uma futura camada sonora só deve existir com consentimento explícito, mute persistente e sem autoplay.
 - Se surgir um segundo projeto CRT, extrair os alvos e o audit de framebuffer para um módulo compartilhado; por enquanto, a skill central foi evoluída.
