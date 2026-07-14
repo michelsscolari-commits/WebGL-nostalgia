@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+.vite/
+.playwright/
+work/
+output/playwright/
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example

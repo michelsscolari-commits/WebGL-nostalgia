@@ -1,0 +1,59 @@
+:root {
+  color-scheme: dark;
+
+  /* Superfícies: preto esverdeado em vez de preto absoluto. */
+  --color-void: #050807;
+  --color-surface: #09100d;
+  --color-surface-raised: #101814;
+  --color-phosphor: #a8d7a1;
+  --color-phosphor-strong: #d8f3cf;
+  --color-amber: #d5a85d;
+  --color-ivory: #e8e4d7;
+  --color-muted: #969d91;
+  --color-hairline: rgb(191 219 184 / 16%);
+  --color-focus: #f0c778;
+
+  --font-editorial: Iowan Old Style, Baskerville, "Times New Roman", serif;
+  --font-system: "IBM Plex Mono", "Cascadia Mono", "SFMono-Regular", Consolas,
+    "Liberation Mono", monospace;
+
+  --text-display: clamp(3.25rem, 9vw, 9.5rem);
+  --text-chapter: clamp(2.6rem, 6.8vw, 7.25rem);
+  --text-body: clamp(1rem, 1.25vw, 1.25rem);
+  --text-micro: 0.6875rem;
+
+  --page-gutter: clamp(1.25rem, 5vw, 6.5rem);
+  --header-height: 6.5rem;
+  --content-max: 90rem;
+  --copy-max: 38rem;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-system: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration-medium: 700ms;
+
+  --z-visual: 0;
+  --z-effects: 2;
+  --z-editorial: 4;
+  --z-controls: 8;
+  --z-boot: 20;
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --text-display: clamp(3rem, 17vw, 5.5rem);
+    --text-chapter: clamp(2.5rem, 14vw, 4.75rem);
+    --page-gutter: clamp(1.1rem, 5vw, 2rem);
+    --header-height: 5.75rem;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-phosphor: #c4f6ba;
+    --color-phosphor-strong: #edffe8;
+    --color-ivory: #fffdf4;
+    --color-muted: #c6cec2;
+    --color-hairline: rgb(229 255 223 / 42%);
+  }
+}
