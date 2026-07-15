@@ -4,6 +4,14 @@ Experiência editorial WebGL guiada por scroll em que uma única matéria de fó
 
 Não há cenas isoladas, assets externos nem tema espacial. O conteúdo semântico permanece no DOM; WebGL é a camada visual progressiva.
 
+## Produção
+
+- Site: [webgl-nostalgia.vercel.app](https://webgl-nostalgia.vercel.app)
+- Código: [github.com/michelsscolari-commits/WebGL-nostalgia](https://github.com/michelsscolari-commits/WebGL-nostalgia)
+- Vercel: preset Vite, Node.js 24.x, `npm ci`, `npm run build` e saída `dist`.
+
+O deploy de produção foi feito pela CLI autenticada. O GitHub App do Vercel ainda precisa receber acesso ao novo repositório para habilitar deploy automático a cada push.
+
 ## Rodar localmente
 
 Requisito: Node.js 22.13 ou superior.

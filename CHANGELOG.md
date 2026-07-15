@@ -2,6 +2,13 @@
 
 ## 0.1.0 — 2026-07-13
 
+### Publicado em 2026-07-14
+
+- Repositório público: `michelsscolari-commits/WebGL-nostalgia`.
+- Produção: `https://webgl-nostalgia.vercel.app`.
+- Projeto Vercel fixado em Vite, Node.js 24.x, `npm ci`, `npm run build` e `dist`.
+- Validação pública desktop/mobile sem erros, overflow ou requests falhos.
+
 ### Adicionado
 
 - Experiência WebGL contínua em sete estados de nostalgia tecnológica.

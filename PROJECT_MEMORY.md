@@ -1,6 +1,15 @@
 # Memória do Projeto — WebGL Premium Nostalgia Tech
 
-Atualizado em 2026-07-13. Estado: **v0.1 funcional e validada localmente**.
+Atualizado em 2026-07-14. Estado: **v0.1 publicada e validada em produção**.
+
+## Produção
+
+- GitHub público: `https://github.com/michelsscolari-commits/WebGL-nostalgia`
+- Produção: `https://webgl-nostalgia.vercel.app`
+- Projeto Vercel: `michelscolari/webgl-nostalgia`, Node.js 24.x.
+- Configuração persistente: Vite, `npm ci`, `npm run build`, saída `dist`.
+- Deploy `dpl_HT9zLoiBLDTT5qcQZ3vWZLJFRfTM`, estado `READY` em 2026-07-14.
+- Integração automática GitHub→Vercel pendente: o GitHub App do Vercel ainda não tem acesso ao novo repositório. Deploy manual pela CLI funciona.
 
 ## Intenção que não deve se perder
 
@@ -31,6 +40,7 @@ O progresso visual é ancorado no centro de cada seção editorial. `App.tsx` su
 6. **Fallback precisa cobrir capacidade e falha.** Detectar somente WebGL 2, esconder o Canvas enquanto não estiver pronto e capturar erro de montagem evita uma tela preta sobre a composição estática.
 7. **Movimento reduzido não significa baixa qualidade.** DPR, partículas e bloom dependem de capacidade; a preferência de movimento altera tempo e interação, não a nitidez estática.
 8. **Clipping deve ser medido.** O guardrail de pixels com algum canal acima de 250 ficou entre 0,063% e 0,114%, abaixo do limite de 1%.
+9. **Persistir o preset do Vercel.** `vercel deploy` detectou Vite e publicou corretamente, mas `vercel project add` deixou o projeto como `Other`. Sempre conferir com `vercel project inspect` e persistir framework, install, build e output antes de considerar o deploy encerrado.
 
 ## Evidência da v0.1
 
@@ -44,6 +54,8 @@ O progresso visual é ancorado no centro de cada seção editorial. `App.tsx` su
 - `prefers-reduced-motion`: ponteiro continua alterando o framebuffer.
 - Sem WebGL: zero Canvas, fallback visível e narrativa completa.
 - Perda/restauração de contexto forçada: Canvas oculto no erro e retorno para `available/ready=true`.
+- Produção desktop e mobile: HTTP 200, favicon 200, um Canvas, sete capítulos, zero overflow, zero erro de console e zero request falho.
+- Produção usa 56 mil partículas no desktop e 18 mil no mobile; pausa retornou “Movimento pausado” nos dois viewports.
 
 ## Riscos e próximos passos
 
@@ -52,3 +64,4 @@ O progresso visual é ancorado no centro de cada seção editorial. `App.tsx` su
 - O audit headless usa SwiftShader. FPS, temperatura e consumo devem ser medidos em celulares físicos de entrada antes de produção.
 - Uma futura camada sonora só deve existir com consentimento explícito, mute persistente e sem autoplay.
 - Se surgir um segundo projeto CRT, extrair os alvos e o audit de framebuffer para um módulo compartilhado; por enquanto, a skill central foi evoluída.
+- Autorizar `michelsscolari-commits/WebGL-nostalgia` no GitHub App do Vercel e repetir `vercel git connect` para ativar deploy automático por push.
