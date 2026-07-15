@@ -3,6 +3,7 @@ dist/
 coverage/
 .vite/
 .playwright/
+.vercel/
 work/
 output/playwright/
 *.log
