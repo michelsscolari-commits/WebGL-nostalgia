@@ -8,7 +8,7 @@ Atualizado em 2026-07-14. Estado: **v0.1 publicada e validada em produção**.
 - Produção: `https://webgl-nostalgia.vercel.app`
 - Projeto Vercel: `michelscolari/webgl-nostalgia`, Node.js 24.x.
 - Configuração persistente: Vite, `npm ci`, `npm run build`, saída `dist`.
-- Deploy `dpl_HT9zLoiBLDTT5qcQZ3vWZLJFRfTM`, estado `READY` em 2026-07-14.
+- Deploy final `dpl_5dk4CJdHs2e1bERafsiv4LqJWsck`, estado `READY` em 2026-07-14.
 - Integração automática GitHub→Vercel pendente: o GitHub App do Vercel ainda não tem acesso ao novo repositório. Deploy manual pela CLI funciona.
 
 ## Intenção que não deve se perder
